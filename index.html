@@ -2,7 +2,8 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Portfolio IT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio IT - Sebastian Fajer</title>
 
 <style>
 html {
@@ -11,15 +12,15 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     color: white;
     background: url("background.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
-/* overlay przyciemniający */
+/* ciemna ale jasna nakładka */
 .overlay {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.5);
     min-height: 100vh;
 }
 
@@ -28,10 +29,11 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.75);
     padding: 15px;
     text-align: center;
     z-index: 1000;
+    backdrop-filter: blur(8px);
 }
 
 nav a {
@@ -52,18 +54,20 @@ nav a:hover {
     padding: 120px 20px;
 }
 
-/* BOX */
+/* GLASS BOX */
 .box {
     background: rgba(255,255,255,0.08);
     padding: 25px;
     border-radius: 12px;
     margin-top: 20px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* HEAD */
 h1 {
     font-size: 48px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -80,13 +84,14 @@ h2 {
     color: black;
     text-decoration: none;
     border-radius: 6px;
+    font-weight: bold;
 }
 
 .btn:hover {
     background: white;
 }
 
-/* PROJEKTY GRID */
+/* PROJEKTY */
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -97,11 +102,13 @@ h2 {
     background: rgba(255,255,255,0.08);
     border-radius: 10px;
     overflow: hidden;
+    backdrop-filter: blur(8px);
 }
 
 .project iframe {
     width: 100%;
     height: 200px;
+    border: none;
 }
 
 .project p {
@@ -113,6 +120,10 @@ h2 {
     .projects {
         grid-template-columns: 1fr;
     }
+
+    h1 {
+        font-size: 36px;
+    }
 }
 </style>
 
@@ -122,6 +133,7 @@ h2 {
 
 <div class="overlay">
 
+<!-- NAV -->
 <nav>
     <a href="#home">Start</a>
     <a href="#about">O mnie</a>
@@ -142,9 +154,9 @@ h2 {
     <div class="box">
         <h2>O mnie</h2>
         <p>
-        Uczeń technikum informatycznego. Interesuję się sieciami komputerowymi,
-        konfiguracją sprzętu oraz systemami operacyjnymi.
-        Szukam pierwszej pracy lub praktyk w IT.
+            Uczeń technikum informatycznego. Interesuję się sieciami komputerowymi,
+            konfiguracją sprzętu oraz systemami operacyjnymi.
+            Szukam pierwszej pracy lub praktyk w IT.
         </p>
     </div>
 </div>
@@ -186,7 +198,6 @@ h2 {
             </div>
 
         </div>
-
     </div>
 </div>
 
