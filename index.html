@@ -14,13 +14,15 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: white;
+
+    /* LEPSZE TŁO (SZERSZE + BEZ PSUCIA JAKOŚCI) */
     background: url("background.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background-size: 110% auto;
 }
 
-/* ciemna ale jasna nakładka */
+/* overlay (czytelność + lekki efekt) */
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.45);
     min-height: 100vh;
 }
 
@@ -123,6 +125,10 @@ h2 {
 
     h1 {
         font-size: 36px;
+    }
+
+    body {
+        background-size: cover; /* na telefonach lepiej */
     }
 }
 </style>
