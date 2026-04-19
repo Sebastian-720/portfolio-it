@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio IT</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* overlay przyciemniający */
+.overlay {
+    background: rgba(0, 0, 0, 0.85);
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.9);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: #00ffcc;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* SEKCJE */
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 120px 20px;
+}
+
+/* BOX */
+.box {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* HEAD */
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    border-left: 5px solid #00ffcc;
+    padding-left: 10px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #00ffcc;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* PROJEKTY GRID */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.project {
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project iframe {
+    width: 100%;
+    height: 200px;
+}
+
+.project p {
+    padding: 10px;
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 800px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<nav>
+    <a href="#home">Start</a>
+    <a href="#about">O mnie</a>
+    <a href="#skills">Umiejętności</a>
+    <a href="#projects">Projekty</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<!-- START -->
+<div id="home" class="section">
+    <h1>Sebastian Fajer</h1>
+    <p>Technik informatyk | Sieci | MSP | Serwis PC</p>
+    <a href="#contact" class="btn">Kontakt</a>
+</div>
+
+<!-- O MNIE -->
+<div id="about" class="section">
+    <div class="box">
+        <h2>O mnie</h2>
+        <p>
+        Uczeń technikum informatycznego. Interesuję się sieciami komputerowymi,
+        konfiguracją sprzętu oraz systemami operacyjnymi.
+        Szukam pierwszej pracy lub praktyk w IT.
+        </p>
+    </div>
+</div>
+
+<!-- UMIEJĘTNOŚCI -->
+<div id="skills" class="section">
+    <div class="box">
+        <h2>Umiejętności</h2>
+        <ul>
+            <li>Serwis i składanie komputerów</li>
+            <li>Windows / Linux</li>
+            <li>Sieci (IP, DHCP, DNS)</li>
+            <li>MikroTik / TP-Link</li>
+            <li>RJ-45</li>
+        </ul>
+    </div>
+</div>
+
+<!-- PROJEKTY -->
+<div id="projects" class="section">
+    <div class="box">
+        <h2>Projekty</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <iframe src="https://www.youtube.com/embed/TUTAJ_ID_FILMU"></iframe>
+                <p>Konfiguracja sieci domowej</p>
+            </div>
+
+            <div class="project">
+                <iframe src="https://www.youtube.com/embed/TUTAJ_ID_FILMU"></iframe>
+                <p>Instalacja systemu</p>
+            </div>
+
+            <div class="project">
+                <iframe src="https://www.youtube.com/embed/TUTAJ_ID_FILMU"></iframe>
+                <p>Składanie PC</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- KONTAKT -->
+<div id="contact" class="section">
+    <div class="box">
+        <h2>Kontakt</h2>
+        <p>Email: twojmail@example.com</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
